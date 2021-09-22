@@ -26,6 +26,15 @@ namespace DelegateCalculator
 
             newOps.Invoke(x, y);
 
+            //Anonymous Method here
+            DelegateCal obj = delegate
+            {
+                Console.WriteLine("I'm in the Anonymous Method!");
+                Console.WriteLine();
+                newOps.Invoke(x, y);
+            };
+            obj(x,y);
+
 
             Console.ReadLine();
 
